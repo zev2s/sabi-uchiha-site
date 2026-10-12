@@ -1,0 +1,72 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="theme-color" content="#09090b" />
+  <title>Саби Учиха — слушать</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="grain" aria-hidden="true"></div>
+  <main class="page">
+    <header class="topbar">
+      <a class="wordmark" href="#top" aria-label="Саби Учиха"><span class="mark">S</span><span>САБИ УЧИХА</span></a>
+      <span class="top-note"><i></i> РЕЛИЗ!</span>
+      <span class="edition">ЛИМИТИРОВАННАЯ СТРАНИЦА&nbsp; / &nbsp;01—03</span>
+    </header>
+
+    <section class="hero" id="top">
+      <div class="art-column">
+        <div class="cover-frame" id="coverFrame">
+          <img class="cover" src="assets/cover.png" alt="Обложка релиза Саби Учиха" />
+        </div>
+        <div class="art-meta"><span></span><span></span></div>
+      </div>
+
+      <div class="music-column">
+        <div class="intro">
+          <div class="eyebrow"><span class="eyebrow-line"></span> ТРИ ТРЕКА · ОДИН РЕЛИЗ</div>
+          <h1>Саби<br><em>Учиха</em></h1>
+          <p class="intro-copy">Три песни. <br>САМОЙ САБИ УЧИХИ!</p>
+        </div>
+
+        <div class="now-playing">
+          <div class="now-label"><span>СЕЙЧАС ИГРАЕТ</span><span class="live-dot"></span></div>
+          <div class="track-title" id="nowTitle">Выбери свой трек</div>
+          <div class="player-controls">
+            <button class="icon-button" id="prev" aria-label="Предыдущий трек" title="Предыдущий">⟨</button>
+            <button class="play-button" id="play" aria-label="Воспроизвести"><span class="play-glyph">▶</span></button>
+            <button class="icon-button" id="next" aria-label="Следующий трек" title="Следующий">⟩</button>
+            <div class="volume-icon" aria-hidden="true">♪</div>
+            <input id="volume" class="volume" type="range" min="0" max="1" step="0.01" value="0.8" aria-label="Громкость" />
+          </div>
+          <div class="progress-wrap">
+            <span id="currentTime">0:00</span>
+            <input id="progress" type="range" min="0" max="1000" value="0" aria-label="Позиция воспроизведения" />
+            <span id="duration">0:00</span>
+          </div>
+        </div>
+
+        <section class="lyrics" aria-live="polite"><div class="lyrics-heading"><span>СЛОВА ПЕСНИ</span><span class="lyrics-sync">SYNC · LIVE</span></div><div class="lyrics-lines"><div class="lyrics-line lyric-prev" id="lyricPrev"></div><div class="lyrics-line lyric-current" id="lyricCurrent">Выбери песню — здесь появится её текст</div><div class="lyrics-line lyric-next" id="lyricNext"></div></div></section>
+        <div class="tracklist-head"><span>ТРЕКЛИСТ</span><span>3 TRACKS</span></div>
+        <div class="tracklist" id="tracklist">
+          <button class="track-row" data-track="0"><span class="track-index">01</span><span class="track-name">Дуть шары</span><span class="track-duration">—:—</span><span class="track-play">▶</span></button>
+          <button class="track-row" data-track="1"><span class="track-index">02</span><span class="track-name">Не брать в рот</span><span class="track-duration">—:—</span><span class="track-play">▶</span></button>
+          <button class="track-row" data-track="2"><span class="track-index">03</span><span class="track-name">Скажи ему нет</span><span class="track-duration">—:—</span><span class="track-play">▶</span></button>
+        </div>
+
+        <div class="soundline"><div class="sound-bars" id="soundBars" aria-hidden="true"></div><span></span><span class="sound-status" id="soundStatus">ОЖИДАНИЕ</span></div>
+      </div>
+    </section>
+    <footer><div class="footer-main"><span>САБИ УЧИХА</span><span class="rights-note">Права <a href="https://t.me/krosovkapoteryalsya" target="_blank" rel="noopener noreferrer">@krosovkapoteryalsya</a> Треки никак не относятся к этому боту.</span><span>© 2026</span></div></footer>
+  </main>
+  <audio id="audio" preload="metadata"></audio>
+  <script src="app.js"></script>
+</body>
+</html>
+
+
